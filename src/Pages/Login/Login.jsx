@@ -115,7 +115,7 @@ function Login() {
             <span className="font-medium">Sign in with Google</span>
           </button>
 
-          <button
+          {/* <button
            onClick={signInWithFaceBook}
             className="cursor-pointer w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg border border-gray-300 hover:bg-gray-50 transition"
           >
@@ -125,7 +125,7 @@ function Login() {
               className="w-5 h-5"
             />
             <span className="font-medium">Sign in with Facebook</span>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
