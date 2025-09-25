@@ -35,7 +35,18 @@ export const AuthProvider =({children})=>{
     return { data, error };
   }
 
- 
+  const signInWithFaceBook = async()=>{
+    const {data,error} = await supabase.auth.signInWithOAuth({
+        provider: 'facebook',
+        options: {
+        redirectTo: "http://localhost:5175/", // أو أي URL عايزة ترجعيه بعد تسجيل الدخول
+      },
+    })
+    if(error){
+        console.log('Error logging in with Google:', error.message);
+    }
+    return { data, error };
+  }
 
   const signOut = async()=>{
     const {error} = await supabase.auth.signOut();
