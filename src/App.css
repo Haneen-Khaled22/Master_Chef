@@ -1,0 +1,50 @@
+@import "tailwindcss";
+#root {
+  margin: 0 auto;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(242, 235, 221);
+  font-family: "Dosis", sans-serif;
+  /* background-color: rgb(232, 186, 93); */
+}
+@font-face {
+  font-family: "Dosis";
+  src: url("./assets/fonts/Dosis-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #FFF;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid rgba(211,159,56,1);
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
